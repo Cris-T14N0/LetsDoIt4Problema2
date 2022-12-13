@@ -1,6 +1,5 @@
 <?php
 $n = $_POST['n'];
-echo "$n";
 ?>
 
 <!DOCTYPE html>
@@ -12,6 +11,21 @@ echo "$n";
     <title>Document</title>
 </head>
 <body>
-    
+
+    <?php
+
+        function random(n1)
+        {
+            do
+            {
+                // Gerar número com um "alcance" específico
+                $ramdomN = rand(10,20);
+                print_r($randomNumber);
+                print_r("\n");
+
+            }while ($randomN != $n)
+        }
+    ?>
+
 </body>
 </html>
