@@ -1,6 +1,18 @@
 <?php
 $n = $_POST['n'];
+
+//Gerar número aleatório:
+function random()
+{
+// Gerar número com um "alcance" específico
+    $randomN = rand(10,20);
+    print_r("\n");
+
+    return $randomN;
+}
 ?>
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -11,21 +23,19 @@ $n = $_POST['n'];
     <title>Document</title>
 </head>
 <body>
+    <?php 
+    echo "Números aleatórios gerados até: $n";
+    ?>
+    <br>
 
     <?php
+    
+    do{
+        
+    $RanFunction = Random();
+    echo "$RanFunction";
 
-        function random(n1)
-        {
-            do
-            {
-                // Gerar número com um "alcance" específico
-                $ramdomN = rand(10,20);
-                print_r($randomNumber);
-                print_r("\n");
-
-            }while ($randomN != $n)
-        }
+    }while($RanFunction != $n)
     ?>
-
 </body>
 </html>
