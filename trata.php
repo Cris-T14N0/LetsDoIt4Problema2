@@ -1,6 +1,6 @@
 <?php
 $n = $_POST['n'];
-
+$contador = 0;
 //Gerar número aleatório:
 function random()
 {
@@ -12,8 +12,6 @@ function random()
 }
 ?>
 
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,18 +22,42 @@ function random()
 </head>
 <body>
     <?php 
-    echo "Números aleatórios gerados até: $n";
+    echo "Números aleatórios gerados até $n:";
     ?>
-    <br>
+
+    <p>
 
     <?php
     
-    do{
-        
+    //Ciclo de repetição
+    do
+    {
+    
+    $contador++;
+    
     $RanFunction = Random();
     echo "$RanFunction";
+    print_r("\n");
 
-    }while($RanFunction != $n)
+    //Parar quando o número gerado for igual ao nº que foi escolhido pelo utilizador
+    } while ($RanFunction != $n)
     ?>
+
+    <p>
+
+    <?php
+    if($contador >= 2)
+    {
+        Echo "Foram necessárias $contador vezes para conseguir chegar ao número introduzido.";
+    }
+    else
+    {
+        Echo "Foi necessário $contador vez para conseguir chegar ao número introduzido.";
+    }
+    ?>
+
+    <br>
+
+    <a href="index.php">Votlar à página inicial</a>
 </body>
 </html>
